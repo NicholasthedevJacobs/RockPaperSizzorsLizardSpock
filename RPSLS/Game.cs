@@ -12,11 +12,12 @@ namespace RPSLS
         //member variables
         Player playerOne;
         Player playerTwo;
+        int endGameScore;
 
         //constructor
         public Game()
         {
-            
+            endGameScore = 3;
             
             
         }
@@ -78,23 +79,23 @@ namespace RPSLS
             {
                 playerTwo.score += 1;
             }
-            else if (playerOne.chosenAction == "Rock" && (playerTwo.chosenAction == "Paper" || playerTwo.chosenAction == "Spock"))
+            else if (playerTwo.chosenAction == "Rock" && (playerOne.chosenAction == "Paper" || playerOne.chosenAction == "Spock"))
             {
                 playerOne.score += 1;
             }
-            else if (playerOne.chosenAction == "Paper" && (playerTwo.chosenAction == "Scissors" || playerTwo.chosenAction == "Lizard"))
+            else if (playerTwo.chosenAction == "Paper" && (playerOne.chosenAction == "Scissors" || playerOne.chosenAction == "Lizard"))
             {
                 playerOne.score += 1;
             }
-            else if (playerOne.chosenAction == "Scissors" && (playerTwo.chosenAction == "Spock" || playerTwo.chosenAction == "Rock"))
+            else if (playerTwo.chosenAction == "Scissors" && (playerOne.chosenAction == "Spock" || playerOne.chosenAction == "Rock"))
             {
                 playerOne.score += 1;
             }
-            else if (playerOne.chosenAction == "Lizard" && (playerTwo.chosenAction == "Rock" || playerTwo.chosenAction == "Scissors"))
+            else if (playerTwo.chosenAction == "Lizard" && (playerOne.chosenAction == "Rock" || playerOne.chosenAction == "Scissors"))
             {
                 playerOne.score += 1;
             }
-            else if (playerOne.chosenAction == "Spock" && (playerTwo.chosenAction == "Lizard" || playerTwo.chosenAction == "Paper"))
+            else if (playerTwo.chosenAction == "Spock" && (playerOne.chosenAction == "Lizard" || playerOne.chosenAction == "Paper"))
             {
                 playerOne.score += 1;
             }
@@ -106,6 +107,11 @@ namespace RPSLS
         public void ShowCurrentScores()
         {
             Console.WriteLine($"Player ones score is now {playerOne.score}.  Player two's score is {playerTwo.score}.");
+            Console.WriteLine($"Player one needs {3 - playerOne.score} more points to win.  Player two needs {3 - playerTwo.score} more points to win.");
+        }
+        public void ContinueGameMessage()
+        {
+            Console.WriteLine("Can someone just win already?  If I were playing the game would be over by now.");
         }
         public void DisplayWinner()
         {
@@ -122,13 +128,14 @@ namespace RPSLS
                 playerOne.ChooseAction();
                 playerTwo.ChooseAction();
                 CompareOutcomes();
+                ShowCurrentScores();
+                ContinueGameMessage();
                 
             }
-            //if (playerOne.score == 3)
-            //{
-
-            //}
-
+            if (playerOne.score == 3 || playerTwo.score == 3)
+            {
+                Console.WriteLine("Game over!");
+            }
 
         }
     }
