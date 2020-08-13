@@ -34,10 +34,14 @@ namespace RPSLS
                 Console.WriteLine("Please input a valid choice, and learn to follow instructions.");
                 ChooseGameType();
             }
-            
-            
             return gameTypeChoice;
             
         }
+        public void InitiateGame (int choice)
+        {
+
+        }
     }
 }
+            
+            
