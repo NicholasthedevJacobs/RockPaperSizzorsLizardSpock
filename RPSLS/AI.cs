@@ -14,7 +14,7 @@ namespace RPSLS
         public AI()
         {
             name = "HAL";
-            this.chosenAction = chosenAction;
+            //this.chosenAction = chosenAction;
         }
         //member methods
         public override void ChooseAction()

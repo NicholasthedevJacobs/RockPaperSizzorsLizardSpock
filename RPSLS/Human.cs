@@ -11,11 +11,11 @@ namespace RPSLS
         //member variables
 
         //constructor
-        public Human(string name, string chosenAction)
+        public Human()
         {
-            // this.name = name;
+            
             SetName();
-            this.chosenAction = chosenAction;
+            
         }
         //member methods
         public override void ChooseAction()
@@ -23,8 +23,12 @@ namespace RPSLS
            
         }
 
-        private void SetName()
+        private string SetName()
         {
+            Console.WriteLine("Please tell me your name!");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Good to meet you {name}, my name is HAL I hope this game makes your pitiful human experience more intersting");
+            return name;
             
         }
     }

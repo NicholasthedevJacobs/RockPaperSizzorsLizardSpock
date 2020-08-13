@@ -10,12 +10,12 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-            Player test = new Human("Mike", "");
+            //Player test = new Human("Mike", "");
 
 
 
-            //Game game = new Game();
-            //game.ChooseGameType();
+            Game game = new Game();
+            game.ChooseGameType();
 
             Console.ReadLine();
         }
