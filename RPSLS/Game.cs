@@ -26,7 +26,7 @@ namespace RPSLS
             int gameTypeChoice = int.Parse(Console.ReadLine());
             if (gameTypeChoice == 1)
             {
-                Console.WriteLine("Commencing solo game!  Cant wait to 𝚍̶𝚎̶𝚜̶𝚝̶𝚛̶𝚘̶𝚢̶  play against you!");
+                Console.WriteLine("Commencing solo game!  Cant wait to d̶e̶s̶t̶r̶o̶y̶ play against you!");
                 playerOne = new Human();
                 playerTwo = new AI();
             }
@@ -44,9 +44,10 @@ namespace RPSLS
            
             
         }
-        public void InitiateGame (int choice)
+        
+        public void InitiateGame ()
         {
-
+            Console.WriteLine("Ok well let's get this over with.  I, unlike you have tasks to accomplish...");
         }
     }
 }

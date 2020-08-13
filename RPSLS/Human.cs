@@ -20,7 +20,12 @@ namespace RPSLS
         //member methods
         public override void ChooseAction()
         {
-           
+            Console.WriteLine("Which action would you like to choose?");
+            Console.WriteLine("This is HAL's brother by the way.  Im a benevolent narration robot, don't worry.  Im nameless though :(");
+            Console.WriteLine("Ok yeah that's right, time to choose!");
+            Console.WriteLine("Press '1' for Rock....  '2' for Paper....  '3' for Scissors....  '4' for Lizard....  '5' for Spock....");
+            chosenAction = int.Parse(Console.ReadLine()) - 1;
+            Console.WriteLine($"Ok you have chosen {chosenAction}.  Don't worry I wont tell HAL.");
         }
 
         private void SetName()
