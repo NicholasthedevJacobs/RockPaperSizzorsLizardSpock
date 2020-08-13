@@ -12,13 +12,14 @@ namespace RPSLS
         public string name;
         public int chosenAction;
         public List<string> actions;
-        
+        public int score;
+
 
         //constructor
         public Player()
         {
-            actions = new List<string>();
-            
+            actions = new List<string>();                      
+            score = 0;
             
             actions.Add("Rock");
             actions.Add("Paper");

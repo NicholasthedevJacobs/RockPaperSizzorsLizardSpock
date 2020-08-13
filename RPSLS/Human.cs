@@ -9,7 +9,9 @@ namespace RPSLS
     public class Human : Player
     {
         //member variables
-        
+        //***maybe add a variable for points***
+
+
         //constructor
         public Human()
         {

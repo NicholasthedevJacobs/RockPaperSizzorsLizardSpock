@@ -19,6 +19,10 @@ namespace RPSLS
             
         }
         //member methods
+        public void WelcomeMessage()             
+        {
+                   // Say hello.  Tell the rules.  Make fun of The Big Bang Theory.
+        }
         public void ChooseGameType()
         {   //If I have time, create "hard mode" player vs. AI game mode, with HAL.SUPER
             Console.WriteLine("Whould you like to play a solo game vs. A.I., or play against a friend?");
@@ -41,8 +45,6 @@ namespace RPSLS
                 Console.WriteLine("Please input a valid choice, and learn to follow instructions.  You humans frustrate me.");
                 ChooseGameType();
             }
-           
-            
         }
         
         public void InitiateGame()
@@ -50,12 +52,22 @@ namespace RPSLS
             Console.WriteLine("Ok well let's get this over with.  I, unlike you have tasks to accomplish...");
                 
         }
+        public void CompareOutcomes()
+        {
+
+        }
+        public void DisplayWinner()
+        {
+
+        }
         public void RunGame()
         {
 
         }
     }
 }
+           
+            
                 
                 
 

@@ -10,6 +10,8 @@ namespace RPSLS
     {
         //member variables
         Random rand;
+        //***maybe add a variable for points***
+
         //constructor
         public AI()
         {
