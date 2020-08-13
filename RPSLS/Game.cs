@@ -9,6 +9,8 @@ namespace RPSLS
     public class Game
     {
         //member variables
+        // player1
+        // player2
 
         //constructor
         public Game()
@@ -24,10 +26,14 @@ namespace RPSLS
             if (gameTypeChoice == 1)
             {
                 Console.WriteLine("Commencing solo game!");
+                player1 = new Human();
+
             }
             else if (gameTypeChoice == 2)
             {
                 Console.WriteLine("Commencing friendly game!");
+
+
             }
             else
             {

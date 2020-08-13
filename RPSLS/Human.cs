@@ -13,13 +13,19 @@ namespace RPSLS
         //constructor
         public Human(string name, string chosenAction)
         {
-            this.name = name;
+            // this.name = name;
+            SetName();
             this.chosenAction = chosenAction;
         }
         //member methods
         public override void ChooseAction()
         {
            
+        }
+
+        private void SetName()
+        {
+            
         }
     }
 }
