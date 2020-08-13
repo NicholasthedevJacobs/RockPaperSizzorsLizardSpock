@@ -17,7 +17,7 @@ namespace RPSLS
         public Game()
         {
             
-            ChooseGameType();
+            
             
         }
         //member methods
@@ -103,6 +103,10 @@ namespace RPSLS
                 CompareOutcomes();
             }
         }
+        public void ShowCurrentScores()
+        {
+            Console.WriteLine($"Player ones score is now {playerOne.score}.  Player two's score is {playerTwo.score}.");
+        }
         public void DisplayWinner()
         {
            
@@ -120,10 +124,10 @@ namespace RPSLS
                 CompareOutcomes();
                 
             }
-            if (playerOne.score == 3)
-            {
+            //if (playerOne.score == 3)
+            //{
 
-            }
+            //}
 
 
         }
