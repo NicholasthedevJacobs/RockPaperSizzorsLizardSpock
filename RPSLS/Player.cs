@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Player
+    public abstract class Player
     {
         public string name;
         public List<Action> choice;
@@ -15,8 +15,12 @@ namespace RPSLS
         //constructor
         public Player()
         {
-            
+            choice = new List<Action>();
+            Action chooseRock = new Action("Rock");
+
         }
         //member methods
+        public abstract void ChooseAction()
+
     }
 }

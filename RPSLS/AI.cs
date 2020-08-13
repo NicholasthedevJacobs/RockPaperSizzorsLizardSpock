@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class AI : Player
+    public class AI : Player
     {
         //member variables
 
@@ -16,5 +16,9 @@ namespace RPSLS
             this.name = name;
         }
         //member methods
+        public override void ChooseAction()
+        {
+           
+        }
     }
 }
