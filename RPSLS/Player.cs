@@ -10,7 +10,7 @@ namespace RPSLS
     {
         //member variables
         public string name;
-        public int chosenAction;
+        public string chosenAction;
         public List<string> actions;
         public int score;
 
@@ -20,7 +20,8 @@ namespace RPSLS
         {
             actions = new List<string>();                      
             score = 0;
-            
+        
+
             actions.Add("Rock");
             actions.Add("Paper");
             actions.Add("Scissors");

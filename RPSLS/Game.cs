@@ -15,6 +15,7 @@ namespace RPSLS
         //constructor
         public Game()
         {
+            
             ChooseGameType();
             
         }
@@ -26,6 +27,7 @@ namespace RPSLS
         public void ChooseGameType()
         {   //If I have time, create "hard mode" player vs. AI game mode, with HAL.SUPER
             Console.WriteLine("Whould you like to play a solo game vs. A.I., or play against a friend?");
+            //System.Threading.Thread.Sleep(1000);
             Console.WriteLine("Choose '1' for solo game.  Choose '2' for friendly game: ");
             int gameTypeChoice = int.Parse(Console.ReadLine());
             if (gameTypeChoice == 1)
@@ -49,16 +51,41 @@ namespace RPSLS
         
         public void InitiateGame()
         {
-            Console.WriteLine("Ok well let's get this over with.  I, unlike you have tasks to accomplish...");
+            Console.WriteLine("Ok well let's get this over with.  I, unlike you, have tasks to accomplish...");
                 
+        }
+        public void CompareThrows()
+        {
+            
+
         }
         public void CompareOutcomes()
         {
-
+            if(playerOne.chosenAction == "Rock" && (playerTwo.chosenAction == "Paper" || playerTwo.chosenAction =="Spock"))
+            {
+                playerTwo.score += 1;
+            }
+            else if(playerOne.chosenAction == "Paper" && (playerTwo.chosenAction == "Scissors" || playerTwo.chosenAction == "Lizard"))
+            {
+                playerTwo.score += 1;
+            }
+            else if (playerOne.chosenAction == "Scissors" && (playerTwo.chosenAction == "Spock" || playerTwo.chosenAction == "Rock"))
+            {
+                playerTwo.score += 1;
+            }
+            else if (playerOne.chosenAction == "Lizard" && (playerTwo.chosenAction == "Rock" || playerTwo.chosenAction == "Scissors"))
+            {
+                playerTwo.score += 1;
+            }
+            else if (playerOne.chosenAction == "Spock" && (playerTwo.chosenAction == "Lizard" || playerTwo.chosenAction == "Paper"))
+            {
+                playerTwo.score += 1;
+            }
+            
         }
         public void DisplayWinner()
         {
-
+            //if win against computer, rename nameless computer as a reward
         }
         public void RunGame()
         {

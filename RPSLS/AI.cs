@@ -22,7 +22,8 @@ namespace RPSLS
         //member methods
         public override void ChooseAction()
         {
-            chosenAction = rand.Next(actions.Count);
+            int chosenActionInt = rand.Next(actions.Count);
+            chosenAction = actions[chosenActionInt];
         }
     }
 }
