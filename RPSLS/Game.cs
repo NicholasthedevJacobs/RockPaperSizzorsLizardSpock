@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -54,18 +55,14 @@ namespace RPSLS
             Console.WriteLine("Ok well let's get this over with.  I, unlike you, have tasks to accomplish...");
                 
         }
-        public void CompareThrows()
-        {
-            
-
-        }
+       
         public void CompareOutcomes()
         {
-            if(playerOne.chosenAction == "Rock" && (playerTwo.chosenAction == "Paper" || playerTwo.chosenAction =="Spock"))
+            if (playerOne.chosenAction == "Rock" && (playerTwo.chosenAction == "Paper" || playerTwo.chosenAction == "Spock"))
             {
                 playerTwo.score += 1;
             }
-            else if(playerOne.chosenAction == "Paper" && (playerTwo.chosenAction == "Scissors" || playerTwo.chosenAction == "Lizard"))
+            else if (playerOne.chosenAction == "Paper" && (playerTwo.chosenAction == "Scissors" || playerTwo.chosenAction == "Lizard"))
             {
                 playerTwo.score += 1;
             }
@@ -81,14 +78,53 @@ namespace RPSLS
             {
                 playerTwo.score += 1;
             }
-            
+            else if (playerOne.chosenAction == "Rock" && (playerTwo.chosenAction == "Paper" || playerTwo.chosenAction == "Spock"))
+            {
+                playerOne.score += 1;
+            }
+            else if (playerOne.chosenAction == "Paper" && (playerTwo.chosenAction == "Scissors" || playerTwo.chosenAction == "Lizard"))
+            {
+                playerOne.score += 1;
+            }
+            else if (playerOne.chosenAction == "Scissors" && (playerTwo.chosenAction == "Spock" || playerTwo.chosenAction == "Rock"))
+            {
+                playerOne.score += 1;
+            }
+            else if (playerOne.chosenAction == "Lizard" && (playerTwo.chosenAction == "Rock" || playerTwo.chosenAction == "Scissors"))
+            {
+                playerOne.score += 1;
+            }
+            else if (playerOne.chosenAction == "Spock" && (playerTwo.chosenAction == "Lizard" || playerTwo.chosenAction == "Paper"))
+            {
+                playerOne.score += 1;
+            }
+            else
+            {
+                CompareOutcomes();
+            }
         }
         public void DisplayWinner()
         {
+           
             //if win against computer, rename nameless computer as a reward
         }
         public void RunGame()
         {
+            ChooseGameType();
+            InitiateGame();
+            while (playerOne.score < 3 && playerTwo.score < 3)
+            {
+                
+                playerOne.ChooseAction();
+                playerTwo.ChooseAction();
+                CompareOutcomes();
+                
+            }
+            if (playerOne.score == 3)
+            {
+
+            }
+
 
         }
     }
