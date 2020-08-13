@@ -16,7 +16,7 @@ namespace RPSLS
         public Player()
         {
             choice = new List<Action>();
-            Action chooseRock = new Action("Rock");
+            Action chooseRock = new Action();
 
         }
         //member methods
