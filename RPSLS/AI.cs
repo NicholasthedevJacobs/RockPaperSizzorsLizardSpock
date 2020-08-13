@@ -11,9 +11,9 @@ namespace RPSLS
         //member variables
 
         //constructor
-        public AI()
+        public AI(string name, Action choice)
         {
-
+            this.name = name;
         }
         //member methods
     }

@@ -8,12 +8,14 @@ namespace RPSLS
 {
     class Player
     {
+        public string name;
+        public List<Action> choice;
         //member variables
 
         //constructor
         public Player()
         {
-
+            
         }
         //member methods
     }
