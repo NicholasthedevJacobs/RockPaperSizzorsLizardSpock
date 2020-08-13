@@ -8,15 +8,25 @@ namespace RPSLS
 {
     public abstract class Player
     {
-        public string name;
-        public List<Action> choice;
+        public string nameAction;
+        public string chosenAction;
+        public List<Action> actions;
         //member variables
 
         //constructor
-        public Player()
+        public Player(Action action, string nameAction)
         {
-            choice = new List<Action>();
-            Action chooseRock = new Action();
+            actions = new List<Action>();
+            Action chooseRock = new Action(action);
+            Action choosePaper = new Action(action);
+            Action chooseScissors = new Action(action);
+            Action chooseLizard = new Action(action);
+            Action chooseSpock = new Action(action);
+            actions.Add(chooseRock);
+            actions.Add(choosePaper);
+            actions.Add(chooseScissors);
+            actions.Add(chooseLizard);
+            actions.Add(chooseSpock);
 
         }
         //member methods
