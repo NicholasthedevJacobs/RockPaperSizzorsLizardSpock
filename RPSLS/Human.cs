@@ -11,9 +11,10 @@ namespace RPSLS
         //member variables
 
         //constructor
-        public Human(string name, Action choice)
+        public Human(string name, string chosenAction)
         {
             this.name = name;
+            this.chosenAction = chosenAction;
         }
         //member methods
         public override void ChooseAction()
