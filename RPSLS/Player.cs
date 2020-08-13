@@ -8,10 +8,11 @@ namespace RPSLS
 {
     public abstract class Player
     {
+        //member variables
         public string name;
         public int chosenAction;
         public List<string> actions;
-        //member variables
+        
 
         //constructor
         public Player()

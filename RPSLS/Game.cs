@@ -45,9 +45,14 @@ namespace RPSLS
             
         }
         
-        public void InitiateGame ()
+        public void InitiateGame()
         {
             Console.WriteLine("Ok well let's get this over with.  I, unlike you have tasks to accomplish...");
+                
+        }
+        public void RunGame()
+        {
+
         }
     }
 }
