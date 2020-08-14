@@ -33,16 +33,21 @@ namespace RPSLS
             Console.WriteLine("Press '5' for Spock.");
 
             int gestureLocation = int.Parse(Console.ReadLine()) - 1;
+            Console.Clear();
            
             if (gestureLocation >= 0 && gestureLocation <= 4)
             {
                 chosenAction = actions[gestureLocation];
                 Console.WriteLine($"Ok you have chosen {chosenAction}.");
+                System.Threading.Thread.Sleep(1000);
+                Console.WriteLine("Hit enter.");
                 
             }
             else
             {
                 Console.WriteLine("Invalid Input.  Try again, and try harder this time.");
+                System.Threading.Thread.Sleep(2000);
+                Console.Clear();
                 ChooseAction();
             }
             
@@ -55,8 +60,10 @@ namespace RPSLS
             {
                 Console.WriteLine("Player one, tell me your name!");
                 name = Console.ReadLine();
+                Console.Clear();
                 Console.WriteLine($"Good to meet you {name}, my name is HAL I hope this game makes your pitiful human experience more intersting.");
-                System.Threading.Thread.Sleep(1800);
+                System.Threading.Thread.Sleep(2000);
+                Console.WriteLine(" ");
                 Console.WriteLine("Hit Enter to continue...");
                 Console.ReadLine();
                 Console.Clear();
@@ -65,6 +72,7 @@ namespace RPSLS
             {
                 Console.WriteLine("What are you waiting for player two?  Tell me your name.");
                 name = Console.ReadLine();
+                Console.Clear();
                 Console.WriteLine($"Hello {name}. Good day to you.");
                 System.Threading.Thread.Sleep(1200);
                 Console.WriteLine("Hit Enter to continue...");
