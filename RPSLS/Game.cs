@@ -40,19 +40,60 @@ namespace RPSLS
             Console.Write("Greetings human....");
             System.Threading.Thread.Sleep(1500);
             Console.WriteLine("You're here so I assume you want to play the game.....");
-            System.Threading.Thread.Sleep(1800);
+            System.Threading.Thread.Sleep(2000);
             Console.WriteLine("The rules are simple enough, even for your simple mind to comprehend.");
+            System.Threading.Thread.Sleep(2200);
+            Console.Write("        This is...");
             System.Threading.Thread.Sleep(1800);
-            Console.Write("        This is Rock...");
-            System.Threading.Thread.Sleep(800);
-            Console.Write("Paper...");
-            System.Threading.Thread.Sleep(800);
-            Console.Write("Scissors...");
-            System.Threading.Thread.Sleep(800);
-            Console.Write("Lizard...");
-            System.Threading.Thread.Sleep(800);
-            Console.WriteLine("Spock...");
-            System.Threading.Thread.Sleep(800);
+            Console.Clear();
+            System.Threading.Thread.Sleep(400);
+            Console.WriteLine(@"                _,.---._      _,.----.  ,--.-.,-.  ");
+            Console.WriteLine(@"  .-.,.---.   ,-.' , -  `.  .' .' -   \/==/- |\  \ ");
+            Console.WriteLine(@" /==/  `   \ /==/_,  ,  - \/==/  ,  ,-'|==|_ `/_ / ");
+            Console.WriteLine(@"|==|-, .=., |==|   .=.     |==|-   |  .|==| ,   /  ");
+            Console.WriteLine(@"|==|   '='  /==|_ : ;=:  - |==|_   `-' \==|-  .|   ");
+            Console.WriteLine(@"|==|- ,   .'|==| , '='     |==|   _  , |==| _ , \  ");
+            Console.WriteLine(@"|==|_  . ,'. \==\ -    ,_ /\==\.       /==/  '\  | ");
+            Console.WriteLine(@"/==/  /\ ,  ) '.='. -   .'  `-.`.___.-'\==\ /\=\.' ");
+            Console.WriteLine(@"`--`-`--`--'    `--`--''                `--`       ");
+            System.Threading.Thread.Sleep(600);
+            Console.Clear();
+            Console.WriteLine(@".------..------..------..------..------.");
+            Console.WriteLine(@"|P.--. ||A.--. ||P.--. ||E.--. ||R.--. |");
+            Console.WriteLine(@"| :/\: || (\/) || :/\: || (\/) || :(): |");
+            Console.WriteLine(@"| (__) || :\/: || (__) || :\/: || ()() |");
+            Console.WriteLine(@"| '--'P|| '--'A|| '--'P|| '--'E|| '--'R|");
+            Console.WriteLine(@"`------'`------'`------'`------'`------'");
+            System.Threading.Thread.Sleep(600);
+            Console.Clear();
+            Console.WriteLine(@"   _____      _                          ");
+            Console.WriteLine(@"  / ___/_____(_)_____________  __________");
+            Console.WriteLine(@"  \__ \/ ___/ / ___/ ___/ __ \/ ___/ ___/");
+            Console.WriteLine(@" ___/ / /__/ (__  |__  ) /_/ / /  (__  ) ");
+            Console.WriteLine(@"/____/\___/_/____/____/\____/_/  /____/  ");
+            Console.WriteLine(@"                                         ");
+            System.Threading.Thread.Sleep(600);
+            Console.Clear();
+            Console.WriteLine(@"  ___    __                     __ ");
+            Console.WriteLine(@" |   |  |__.-----.---.-.----.--|  |");
+            Console.WriteLine(@" |.  |  |  |-- __|  _  |   _|  _  |");
+            Console.WriteLine(@" |.  |__|__|_____|___._|__| |_____|");
+            Console.WriteLine(@" |:  1   |                         ");
+            Console.WriteLine(@" |::.. . |                         ");
+            Console.WriteLine(@" `-------'                         ");
+            Console.WriteLine(@"                                   ");
+            System.Threading.Thread.Sleep(600);
+            Console.Clear();
+            Console.WriteLine(@"     _______..______     ______     ______  __  ___ ");
+            Console.WriteLine(@"    /       ||   _  \   /  __  \   /      ||  |/  / ");
+            Console.WriteLine(@"   |   (----`|  |_)  | |  |  |  | |  ,----'|  '  /  ");
+            Console.WriteLine(@"    \   \    |   ___/  |  |  |  | |  |     |    <   ");
+            Console.WriteLine(@".----)   |   |  |      |  `--'  | |  `----.|  .  \  ");
+            Console.WriteLine(@"|_______/    | _|       \______/   \______||__|\__\ ");
+            Console.WriteLine(@"                                                    ");
+            System.Threading.Thread.Sleep(600);
+            Console.Clear();
+            System.Threading.Thread.Sleep(1000);
             Console.WriteLine(" ");
             Console.WriteLine("--Rock crushes Scissors, also crushes Lizard");
             Console.WriteLine("  --Scissors cuts Paper, and decapitates Lizard");
@@ -78,7 +119,7 @@ namespace RPSLS
             else if (gameTypeChoice == 2)
             {
                 Console.WriteLine("Commencing friendly game!");
-                System.Threading.Thread.Sleep(1200);
+                System.Threading.Thread.Sleep(1600);
                 Console.Clear();
                 playerOne = new Human(1);
                 playerTwo = new Human(2);
@@ -93,7 +134,10 @@ namespace RPSLS
         public void InitiateGame()
         {
             Console.WriteLine("Ok well let's get this over with.  I, unlike you, have tasks to accomplish...");
-                
+            System.Threading.Thread.Sleep(1200);
+            Console.WriteLine("Hit Enter... (you should know this by now).");
+            Console.ReadLine();
+
         }
        
         public void CompareOutcomes()
