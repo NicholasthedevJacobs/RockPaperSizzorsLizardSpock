@@ -24,7 +24,7 @@ namespace RPSLS
         //member methods
         public override void ChooseAction()
         {
-            Console.WriteLine("Which action would you like to choose?");
+            Console.WriteLine($"Which action would you like to choose player {playerNumber}?");
             Console.WriteLine(" ");
             Console.WriteLine("Press '1' for Rock.");
             Console.WriteLine("Press '2' for Paper.");
@@ -36,8 +36,9 @@ namespace RPSLS
            
             if (gestureLocation >= 0 && gestureLocation <= 4)
             {
-                Console.WriteLine($"Ok you have chosen {chosenAction}.  Don't worry I wont tell HAL.");
                 chosenAction = actions[gestureLocation];
+                Console.WriteLine($"Ok you have chosen {chosenAction}.");
+                
             }
             else
             {
@@ -55,7 +56,7 @@ namespace RPSLS
                 Console.WriteLine("Player one, tell me your name!");
                 name = Console.ReadLine();
                 Console.WriteLine($"Good to meet you {name}, my name is HAL I hope this game makes your pitiful human experience more intersting.");
-                System.Threading.Thread.Sleep(1200);
+                System.Threading.Thread.Sleep(1800);
                 Console.WriteLine("Hit Enter to continue...");
                 Console.ReadLine();
                 Console.Clear();
