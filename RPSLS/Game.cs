@@ -236,13 +236,13 @@ namespace RPSLS
         }
         public void CheckIfLessThanTwoWins()
         {
-            if ((playerOne.score < 2 && playerTwo.score == 2) || (playerOne.score == 2 && playerTwo.score < 2))
+            if ((playerOne.score < 2 && playerTwo.score == 2) || (playerOne.score == 2 && playerTwo.score < 2) || (playerOne.score == 2 && playerTwo.score == 2))
             {
                 AngryContinueMessage();
             }
             else
             {
-
+                WinCondition();
             }
         }
         
@@ -301,7 +301,7 @@ namespace RPSLS
                 }
                 else
                 {
-                    WinCondition();
+                    //WinCondition();
                 }
             }
         
