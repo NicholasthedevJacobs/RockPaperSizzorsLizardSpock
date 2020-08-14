@@ -10,22 +10,25 @@ namespace RPSLS
     {
         //member variables
         Random rand;
-        //***maybe add a variable for points***
+        
 
         //constructor
         public AI()
         {
             rand = new Random();
             name = "HAL";
-            //this.chosenAction = chosenAction;
+            
         }
         //member methods
         public override void ChooseAction(string otherplayerGesture = null)
         {
             int chosenActionInt = rand.Next(actions.Count);
             chosenAction = actions[chosenActionInt];
-            //CHECK HERE DAWG
+            //CHECK HERE DAWG Finish the computers choice message if need be
             Console.WriteLine($"I chose {chosenAction}.");
+            System.Threading.Thread.Sleep(1500);
+            Console.WriteLine("Please hit enter for me.  I don't have buttons to push.");
+            Console.ReadLine();
         }
         public void SayName()
         {

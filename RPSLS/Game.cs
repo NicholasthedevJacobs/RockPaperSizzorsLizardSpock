@@ -111,10 +111,10 @@ namespace RPSLS
             System.Threading.Thread.Sleep(1800);
         }
         public void ChooseGameType()
-        {   //If I have time, create "hard mode" player vs. AI game mode, with HAL.SUPER
+        {  
             Console.WriteLine("Would you like to play a solo game vs. A.I., or play against a friend?");
             System.Threading.Thread.Sleep(1200);
-            Console.WriteLine("***--Choose '1' for solo game.       Choose '2' for friendly game--*** ");
+            Console.WriteLine("***--Choose '1' for solo game.       Choose '2' for friendly game--*** ");//Add more options here
             int gameTypeChoice = int.Parse(Console.ReadLine());
             Console.Clear();
             if (gameTypeChoice == 1)
@@ -132,7 +132,7 @@ namespace RPSLS
                 playerOne = new Human(1);
                 playerTwo = new Human(2);
             }
-            else if ()
+            else if (gameTypeChoice == 3)//Add this logic Here
             else
             {
                 Console.WriteLine("Please input a valid choice, and learn to follow instructions.  You humans frustrate me.");
@@ -156,10 +156,7 @@ namespace RPSLS
             example("Frank");
 
         }
-        public void example(string something = "Bob")
-        {
-
-        }
+       
         public void CompareOutcomes()
         {
             if (playerOne.chosenAction == "Rock" && (playerTwo.chosenAction == "Paper" || playerTwo.chosenAction == "Spock"))
