@@ -35,11 +35,15 @@ namespace RPSLS
             Console.WriteLine(" -------------------------------------------------------------------------");
             Console.WriteLine(" -------------------------------------------------------------------------");
         }
+        public void DisplayRules()
+        {
+
+        }
         public void ChooseGameType()
         {   //If I have time, create "hard mode" player vs. AI game mode, with HAL.SUPER
             Console.WriteLine("Would you like to play a solo game vs. A.I., or play against a friend?");
             System.Threading.Thread.Sleep(2000);
-            Console.WriteLine("Choose '1' for solo game.  Choose '2' for friendly game: ");
+            Console.WriteLine("***--Choose '1' for solo game.---*---Choose '2' for friendly game--*** ");
             int gameTypeChoice = int.Parse(Console.ReadLine());
             if (gameTypeChoice == 1)
             {
