@@ -53,12 +53,13 @@ namespace RPSLS
             System.Threading.Thread.Sleep(800);
             Console.WriteLine("Spock...");
             System.Threading.Thread.Sleep(800);
+            Console.WriteLine(" ");
             Console.WriteLine("--Rock crushes Scissors, also crushes Lizard");
-            Console.WriteLine("  --Scissors cuts Paper, and dcapitates Lizard");
+            Console.WriteLine("  --Scissors cuts Paper, and decapitates Lizard");
             Console.WriteLine("    -- Paper covers Rock, and disproves Spock");
             Console.WriteLine("  --Lizard poisons Spock, and it eats Paper");
             Console.WriteLine("--Spock smashes Scissors, and vaporizes Rock");
-            System.Threading.Thread.Sleep(1400);
+            System.Threading.Thread.Sleep(2000);
             Console.WriteLine("                                              ");
             Console.WriteLine("Whichever player gets to three points first is the winner.");
         }

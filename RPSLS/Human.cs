@@ -9,7 +9,7 @@ namespace RPSLS
     public class Human : Player
     {
         //member variables
-        //***maybe add a variable for points***
+      
 
 
         //constructor
@@ -32,6 +32,7 @@ namespace RPSLS
 
         private void SetName()
         {
+            
             Console.WriteLine("Please tell me your name!");
             name = Console.ReadLine();
             Console.WriteLine($"Good to meet you {name}, my name is HAL I hope this game makes your pitiful human experience more intersting");
