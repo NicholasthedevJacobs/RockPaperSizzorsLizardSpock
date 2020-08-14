@@ -77,6 +77,7 @@ namespace RPSLS
                 Console.Clear();
                 Console.WriteLine($"Hello {name}. Good day to you.");
                 System.Threading.Thread.Sleep(1200);
+                Console.WriteLine(" ");
                 Console.WriteLine("Hit Enter to continue...");
                 Console.ReadLine();
                 Console.Clear();

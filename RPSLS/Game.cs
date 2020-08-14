@@ -197,14 +197,15 @@ namespace RPSLS
             {
                 playerOne.score += 1;
             }
-            else if (playerOne.chosenAction == playerTwo.chosenAction)
+            else 
             {
                 Console.WriteLine("This round was a draw.  Way to make this take even longer.  What a waste.");
                 Console.WriteLine(" ");
                 System.Threading.Thread.Sleep(1500);
                 Console.WriteLine("Hit that Enter key.  It's the only thing you will be good at after this is done, I'm sure");
                 Console.ReadLine();
-                CompareOutcomes();
+                Console.Clear();
+                
             }
         }
         public void ShowCurrentScores()
@@ -243,6 +244,21 @@ namespace RPSLS
             Console.WriteLine("Press Enter to continue...");
             Console.ReadLine();
         }
+        public void WinCondition()
+        {
+            if (playerOne.score == 3)
+            {
+                Console.WriteLine($"Game over! {playerOne.name} wins!");
+            }
+            else if (playerTwo.score == 3)
+            {
+                Console.WriteLine($"Game over! {playerTwo.name} wins!");
+            }
+            else
+            {
+
+            }
+        }
         public void RunGame()
         {
             WelcomeMessage();
@@ -269,20 +285,10 @@ namespace RPSLS
                     CompareOutcomes();
                     ShowCurrentScores();
                     AngryContinueMessage();
+                    WinCondition();
                 }
-                
-               
-                
             }
-            if (playerOne.score == 3)
-            {
-                Console.WriteLine($"Game over! {playerOne.name} wins!");
-            }
-            else if (playerTwo.score == 3)
-            {
-                Console.WriteLine($"Game over! {playerTwo.name} wins!");
-            }
-
+        
         }
     }
 }
