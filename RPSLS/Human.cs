@@ -25,12 +25,27 @@ namespace RPSLS
         public override void ChooseAction()
         {
             Console.WriteLine("Which action would you like to choose?");
-            Console.WriteLine("This is HAL's brother by the way.  Im a benevolent narration robot, don't worry.  Im nameless though :(");
-            Console.WriteLine("Ok yeah that's right, time to choose!");
-            Console.WriteLine("Press '1' for Rock....  '2' for Paper....  '3' for Scissors....  '4' for Lizard....  '5' for Spock....");
+            Console.WriteLine(" ");
+            Console.WriteLine("Press '1' for Rock.");
+            Console.WriteLine("Press '2' for Paper.");
+            Console.WriteLine("Press '3' for Scissors.");
+            Console.WriteLine("Press '4' for Lizard.");
+            Console.WriteLine("Press '5' for Spock.");
+
             int gestureLocation = int.Parse(Console.ReadLine()) - 1;
-            chosenAction = actions[gestureLocation];
-            Console.WriteLine($"Ok you have chosen {chosenAction}.  Don't worry I wont tell HAL.");
+           
+            if (gestureLocation >= 0 && gestureLocation <= 4)
+            {
+                Console.WriteLine($"Ok you have chosen {chosenAction}.  Don't worry I wont tell HAL.");
+                chosenAction = actions[gestureLocation];
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input.  Try again, and try harder this time.");
+                ChooseAction();
+            }
+            
+
         }
 
         private void SetName(int playerNumber)
