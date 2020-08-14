@@ -37,7 +37,30 @@ namespace RPSLS
         }
         public void DisplayRules()
         {
-
+            Console.Write("Greetings human....");
+            System.Threading.Thread.Sleep(1500);
+            Console.WriteLine("You're here so I assume you want to play the game.....");
+            System.Threading.Thread.Sleep(1800);
+            Console.WriteLine("The rules are simple enough, even for your simple mind to comprehend.");
+            System.Threading.Thread.Sleep(1800);
+            Console.Write("        This is Rock...");
+            System.Threading.Thread.Sleep(800);
+            Console.Write("Paper...");
+            System.Threading.Thread.Sleep(800);
+            Console.Write("Scissors...");
+            System.Threading.Thread.Sleep(800);
+            Console.Write("Lizard...");
+            System.Threading.Thread.Sleep(800);
+            Console.WriteLine("Spock...");
+            System.Threading.Thread.Sleep(800);
+            Console.WriteLine("--Rock crushes Scissors, also crushes Lizard");
+            Console.WriteLine("  --Scissors cuts Paper, and dcapitates Lizard");
+            Console.WriteLine("    -- Paper covers Rock, and disproves Spock");
+            Console.WriteLine("  --Lizard poisons Spock, and it eats Paper");
+            Console.WriteLine("--Spock smashes Scissors, and vaporizes Rock");
+            System.Threading.Thread.Sleep(1400);
+            Console.WriteLine("                                              ");
+            Console.WriteLine("Whichever player gets to three points first is the winner.");
         }
         public void ChooseGameType()
         {   //If I have time, create "hard mode" player vs. AI game mode, with HAL.SUPER
@@ -135,6 +158,7 @@ namespace RPSLS
         {
             WelcomeMessage();
             System.Threading.Thread.Sleep(1500);
+            DisplayRules();
             ChooseGameType();
             InitiateGame();
             while (playerOne.score < 3 && playerTwo.score < 3)
