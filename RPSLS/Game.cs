@@ -72,14 +72,14 @@ namespace RPSLS
             if (gameTypeChoice == 1)
             {
                 Console.WriteLine("Commencing solo game!  Cant wait to d̶e̶s̶t̶r̶o̶y̶ play against you!");
-                playerOne = new Human();
+                playerOne = new Human(1);
                 playerTwo = new AI();
             }
             else if (gameTypeChoice == 2)
             {
                 Console.WriteLine("Commencing friendly game!");
-                playerOne = new Human();
-                playerTwo = new Human();
+                playerOne = new Human(1);
+                playerTwo = new Human(2);
             }
             else
             {
