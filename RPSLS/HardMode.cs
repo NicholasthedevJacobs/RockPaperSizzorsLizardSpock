@@ -15,6 +15,22 @@ namespace RPSLS
             {
                 chosenAction = "Spock";
             }
+            else if(otherplayerGesture == "Paper")
+            {
+                chosenAction = "Lizard";
+            }
+            else if(otherplayerGesture == "Scissors")
+            {
+                chosenAction = "Rock";
+            }
+            else if(otherplayerGesture == "Lizard")
+            {
+                chosenAction = " Scissors";
+            }
+            else if(otherplayerGesture == "Spock")
+            {
+                chosenAction = "Paper";
+            }
         }
     }
 }
