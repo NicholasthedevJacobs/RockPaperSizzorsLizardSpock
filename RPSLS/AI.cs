@@ -25,5 +25,9 @@ namespace RPSLS
             int chosenActionInt = rand.Next(actions.Count);
             chosenAction = actions[chosenActionInt];
         }
+        public void SayName()
+        {
+            Console.WriteLine($"Hello, Ill be playing against you today.  My name is {name}.");
+        }
     }
 }

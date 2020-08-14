@@ -37,6 +37,7 @@ namespace RPSLS
         }
         public void DisplayRules()
         {
+            Console.WriteLine(" ");
             Console.Write("Greetings human....");
             System.Threading.Thread.Sleep(1500);
             Console.WriteLine("You're here so I assume you want to play the game.....");
@@ -91,9 +92,10 @@ namespace RPSLS
             Console.WriteLine(@".----)   |   |  |      |  `--'  | |  `----.|  .  \  ");
             Console.WriteLine(@"|_______/    | _|       \______/   \______||__|\__\ ");
             Console.WriteLine(@"                                                    ");
-            System.Threading.Thread.Sleep(600);
+            System.Threading.Thread.Sleep(1000);
             Console.Clear();
             System.Threading.Thread.Sleep(1000);
+            Console.WriteLine("                  THE RULES                   ");
             Console.WriteLine(" ");
             Console.WriteLine("--Rock crushes Scissors, also crushes Lizard");
             Console.WriteLine("  --Scissors cuts Paper, and decapitates Lizard");
@@ -102,17 +104,21 @@ namespace RPSLS
             Console.WriteLine("--Spock smashes Scissors, and vaporizes Rock");
             System.Threading.Thread.Sleep(2000);
             Console.WriteLine("                                              ");
-            Console.WriteLine("Whichever player gets to three points first is the winner.");
+            Console.WriteLine("Whichever player gets to three points first is the winner...");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine(" ");
+            Console.WriteLine("How exciting.");
+            System.Threading.Thread.Sleep(1800);
         }
         public void ChooseGameType()
         {   //If I have time, create "hard mode" player vs. AI game mode, with HAL.SUPER
             Console.WriteLine("Would you like to play a solo game vs. A.I., or play against a friend?");
-            System.Threading.Thread.Sleep(1600);
+            System.Threading.Thread.Sleep(1200);
             Console.WriteLine("***--Choose '1' for solo game.---*---Choose '2' for friendly game--*** ");
             int gameTypeChoice = int.Parse(Console.ReadLine());
             if (gameTypeChoice == 1)
             {
-                Console.WriteLine("Commencing solo game!  Cant wait to d̶e̶s̶t̶r̶o̶y̶ play against you!");
+                Console.WriteLine("Commencing solo game!  Cant wait to DESTROY, umm I mean play against you : D !");
                 playerOne = new Human(1);
                 playerTwo = new AI();
             }
@@ -134,9 +140,10 @@ namespace RPSLS
         public void InitiateGame()
         {
             Console.WriteLine("Ok well let's get this over with.  I, unlike you, have tasks to accomplish...");
-            System.Threading.Thread.Sleep(1200);
+            System.Threading.Thread.Sleep(3000);
             Console.WriteLine("Hit Enter... (you should know this by now).");
             Console.ReadLine();
+            Console.Clear();
 
         }
        
