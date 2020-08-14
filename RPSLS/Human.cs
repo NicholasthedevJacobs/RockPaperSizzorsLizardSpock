@@ -39,13 +39,21 @@ namespace RPSLS
             {
                 Console.WriteLine("Player one, tell me your name!");
                 name = Console.ReadLine();
-                Console.WriteLine($"Good to meet you {name}, my name is HAL I hope this game makes your pitiful human experience more intersting");
+                Console.WriteLine($"Good to meet you {name}, my name is HAL I hope this game makes your pitiful human experience more intersting.");
+                System.Threading.Thread.Sleep(1200);
+                Console.WriteLine("Hit Enter to continue...");
+                Console.ReadLine();
+                Console.Clear();
             }
             else
             {
                 Console.WriteLine("What are you waiting for player two?  Tell me your name.");
                 name = Console.ReadLine();
                 Console.WriteLine($"Hello {name}. Good day to you.");
+                System.Threading.Thread.Sleep(1200);
+                Console.WriteLine("Hit Enter to continue...");
+                Console.ReadLine();
+                Console.Clear();
             }
            
         }

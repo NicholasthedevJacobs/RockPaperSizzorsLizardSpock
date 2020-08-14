@@ -66,7 +66,7 @@ namespace RPSLS
         public void ChooseGameType()
         {   //If I have time, create "hard mode" player vs. AI game mode, with HAL.SUPER
             Console.WriteLine("Would you like to play a solo game vs. A.I., or play against a friend?");
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(1600);
             Console.WriteLine("***--Choose '1' for solo game.---*---Choose '2' for friendly game--*** ");
             int gameTypeChoice = int.Parse(Console.ReadLine());
             if (gameTypeChoice == 1)
@@ -78,6 +78,8 @@ namespace RPSLS
             else if (gameTypeChoice == 2)
             {
                 Console.WriteLine("Commencing friendly game!");
+                System.Threading.Thread.Sleep(1200);
+                Console.Clear();
                 playerOne = new Human(1);
                 playerTwo = new Human(2);
             }
@@ -155,11 +157,18 @@ namespace RPSLS
            
             //if win against computer, rename nameless computer as a reward
         }
+        public void HitEnterToClear()
+        {
+            Console.WriteLine("Press Enter to continue...");
+            Console.ReadLine();
+        }
         public void RunGame()
         {
             WelcomeMessage();
             System.Threading.Thread.Sleep(1500);
             DisplayRules();
+            HitEnterToClear();
+            Console.Clear();
             ChooseGameType();
             InitiateGame();
             while (playerOne.score < 3 && playerTwo.score < 3)
@@ -172,9 +181,13 @@ namespace RPSLS
                 ContinueGameMessage();
                 
             }
-            if (playerOne.score == 3 || playerTwo.score == 3)
+            if (playerOne.score == 3)
             {
-                Console.WriteLine("Game over!");
+                Console.WriteLine($"Game over! {playerOne.name} wins!");
+            }
+            else if (playerTwo.score == 3)
+            {
+                Console.WriteLine($"Game over! {playerTwo.name} wins!");
             }
 
         }
