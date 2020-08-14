@@ -24,12 +24,21 @@ namespace RPSLS
         //member methods
         public void WelcomeMessage()             
         {
-                   // Say hello.  Tell the rules.  Make fun of The Big Bang Theory.
+            Console.WriteLine(" -------------------------------------------------------------------------");
+            Console.WriteLine(" -------------------------------------------------------------------------");
+            Console.WriteLine(@" __      _____________.____   _________  ________      _____  ___________");
+            Console.WriteLine(@"/  \    /  \_   _____/|    |  \_   ___ \ \_____  \    /     \ \_   _____/");
+            Console.WriteLine(@"\   \/\/   /|    __)_ |    |  /    \  \/  /   |   \  /  \ /  \ |    __)_ ");
+            Console.WriteLine(@" \        / |        \|    |__\     \____/    |    \/    Y    \|        \");
+            Console.WriteLine(@"  \__/\  / /_______  /|_______ \______  /\_______  /\____|__  /_______  /");
+            Console.WriteLine(@"       \/          \/         \/      \/         \/         \/        \/ ");
+            Console.WriteLine(" -------------------------------------------------------------------------");
+            Console.WriteLine(" -------------------------------------------------------------------------");
         }
         public void ChooseGameType()
         {   //If I have time, create "hard mode" player vs. AI game mode, with HAL.SUPER
-            Console.WriteLine("Whould you like to play a solo game vs. A.I., or play against a friend?");
-            //System.Threading.Thread.Sleep(1000);
+            Console.WriteLine("Would you like to play a solo game vs. A.I., or play against a friend?");
+            System.Threading.Thread.Sleep(2000);
             Console.WriteLine("Choose '1' for solo game.  Choose '2' for friendly game: ");
             int gameTypeChoice = int.Parse(Console.ReadLine());
             if (gameTypeChoice == 1)
@@ -120,6 +129,8 @@ namespace RPSLS
         }
         public void RunGame()
         {
+            WelcomeMessage();
+            System.Threading.Thread.Sleep(1500);
             ChooseGameType();
             InitiateGame();
             while (playerOne.score < 3 && playerTwo.score < 3)
