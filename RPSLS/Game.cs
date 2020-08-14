@@ -12,12 +12,12 @@ namespace RPSLS
         //member variables
         Player playerOne;
         Player playerTwo;
-        int endGameScore;
+        
 
         //constructor
         public Game()
         {
-            endGameScore = 3;
+            
             
             
         }
@@ -301,7 +301,7 @@ namespace RPSLS
                 }
                 else
                 {
-                    //WinCondition();
+                    
                 }
             }
         

@@ -27,7 +27,7 @@ namespace RPSLS
         }
         public void SayName()
         {
-            Console.WriteLine($"Hello, Ill be playing against you today.  My name is {name}.");
+            Console.WriteLine($"Hello, I'll be playing against you today.  My name is {name}.");
         }
     }
 }
