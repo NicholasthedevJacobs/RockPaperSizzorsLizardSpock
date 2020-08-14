@@ -197,8 +197,13 @@ namespace RPSLS
             {
                 playerOne.score += 1;
             }
-            else
+            else if (playerOne.chosenAction == playerTwo.chosenAction)
             {
+                Console.WriteLine("This round was a draw.  Way to make this take even longer.  What a waste.");
+                Console.WriteLine(" ");
+                System.Threading.Thread.Sleep(1500);
+                Console.WriteLine("Hit that Enter key.  It's the only thing you will be good at after this is done, I'm sure");
+                Console.ReadLine();
                 CompareOutcomes();
             }
         }
