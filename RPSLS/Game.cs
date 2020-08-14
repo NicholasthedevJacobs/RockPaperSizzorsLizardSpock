@@ -216,6 +216,7 @@ namespace RPSLS
         {
             Console.WriteLine("Wow great the round is over.  Hit enter to continue to the next round.");
             Console.ReadLine();
+            Console.Clear();
         }
             
         public void AngryContinueMessage()
@@ -256,7 +257,7 @@ namespace RPSLS
                     ShowCurrentScores();
                     ContinueGameMessage();
                 }
-                else
+                else if (playerOne.score >= 2 || playerTwo.score >= 2)
                 {
                     playerOne.ChooseAction();
                     playerTwo.ChooseAction();
