@@ -41,6 +41,8 @@ namespace RPSLS
                 Console.WriteLine($"Ok you have chosen {chosenAction}.");
                 System.Threading.Thread.Sleep(1000);
                 Console.WriteLine("Hit enter.");
+                Console.ReadLine();
+                Console.Clear();
                 
             }
             else

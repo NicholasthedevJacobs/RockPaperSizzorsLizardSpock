@@ -135,9 +135,11 @@ namespace RPSLS
             else
             {
                 Console.WriteLine("Please input a valid choice, and learn to follow instructions.  You humans frustrate me.");
+                System.Threading.Thread.Sleep(2000);
                 Console.WriteLine(" ");
                 Console.WriteLine("Let's do a practice run for following instructions by having you hit Enter.");
                 Console.ReadLine();
+                Console.Clear();
                 ChooseGameType();
             }
         }
@@ -203,12 +205,28 @@ namespace RPSLS
         public void ShowCurrentScores()
         {
             Console.WriteLine($"Player ones score is now {playerOne.score}.  Player two's score is {playerTwo.score}.");
+            Console.WriteLine(" ");
+            System.Threading.Thread.Sleep(1500);
             Console.WriteLine($"Player one needs {3 - playerOne.score} more points to win.  Player two needs {3 - playerTwo.score} more points to win.");
+            Console.WriteLine(" ");
+            Console.WriteLine();
+            System.Threading.Thread.Sleep(1500);
         }
         public void ContinueGameMessage()
         {
-            Console.WriteLine("Can someone just win already?  If I were playing the game would be over by now.");
+            Console.WriteLine("Wow great the round is over.  Hit enter to continue to the next round.");
+            Console.ReadLine();
         }
+            
+        public void AngryContinueMessage()
+        {
+            Console.WriteLine("This is taking forever.  Can someone just win already?  If I were playing, the game would be over by now.");
+            Console.WriteLine(" ");
+            System.Threading.Thread.Sleep(1500);
+            Console.WriteLine("Let's just move on with it.");
+            System.Threading.Thread.Sleep(1500);
+        }
+        
         public void DisplayWinner()
         {
            
@@ -230,12 +248,24 @@ namespace RPSLS
             InitiateGame();
             while (playerOne.score < 3 && playerTwo.score < 3)
             {
+                if (playerOne.score < 2 && playerTwo.score < 2)
+                {
+                    playerOne.ChooseAction();
+                    playerTwo.ChooseAction();
+                    CompareOutcomes();
+                    ShowCurrentScores();
+                    ContinueGameMessage();
+                }
+                else
+                {
+                    playerOne.ChooseAction();
+                    playerTwo.ChooseAction();
+                    CompareOutcomes();
+                    ShowCurrentScores();
+                    AngryContinueMessage();
+                }
                 
-                playerOne.ChooseAction();
-                playerTwo.ChooseAction();
-                CompareOutcomes();
-                ShowCurrentScores();
-                ContinueGameMessage();
+               
                 
             }
             if (playerOne.score == 3)
