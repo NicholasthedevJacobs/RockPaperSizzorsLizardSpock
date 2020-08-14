@@ -61,7 +61,12 @@ namespace RPSLS
                         isValid = true;
                         break;
                     default:
-                        Console.WriteLine("This is invalid");
+                        Console.WriteLine("OIASPFCNIEI");
+                        System.Threading.Thread.Sleep(600);
+                        Console.WriteLine("How does it feel to have to work with someone who doesn't give helpful input?");
+                        System.Threading.Thread.Sleep(1000);
+                        Console.WriteLine("Now press Enter and lets try again.");
+                        Console.ReadLine();
                         break;
                 }
             }
