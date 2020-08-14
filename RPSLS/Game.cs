@@ -232,6 +232,18 @@ namespace RPSLS
             System.Threading.Thread.Sleep(1500);
             Console.WriteLine("Let's just move on with it.");
             System.Threading.Thread.Sleep(1500);
+            Console.Clear();
+        }
+        public void CheckIfLessThanTwoWins()
+        {
+            if ((playerOne.score < 2 && playerTwo.score == 2) || (playerOne.score == 2 && playerTwo.score < 2))
+            {
+                AngryContinueMessage();
+            }
+            else
+            {
+
+            }
         }
         
         public void DisplayWinner()
@@ -278,13 +290,17 @@ namespace RPSLS
                     ShowCurrentScores();
                     ContinueGameMessage();
                 }
-                else if (playerOne.score >= 2 || playerTwo.score >= 2)
+                else if (playerOne.score == 2 || playerTwo.score == 2)
                 {
                     playerOne.ChooseAction();
                     playerTwo.ChooseAction();
                     CompareOutcomes();
                     ShowCurrentScores();
-                    AngryContinueMessage();
+                    CheckIfLessThanTwoWins();
+                    
+                }
+                else
+                {
                     WinCondition();
                 }
             }
