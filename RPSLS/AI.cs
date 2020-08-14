@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public class AI : Player
+    public class AI : Player 
     {
         //member variables
         Random rand;
@@ -20,10 +20,12 @@ namespace RPSLS
             //this.chosenAction = chosenAction;
         }
         //member methods
-        public override void ChooseAction()
+        public override void ChooseAction(string otherplayerGesture = null)
         {
             int chosenActionInt = rand.Next(actions.Count);
             chosenAction = actions[chosenActionInt];
+            //CHECK HERE DAWG
+            Console.WriteLine($"I chose {chosenAction}.");
         }
         public void SayName()
         {

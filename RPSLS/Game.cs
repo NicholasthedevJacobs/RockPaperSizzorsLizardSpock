@@ -132,6 +132,7 @@ namespace RPSLS
                 playerOne = new Human(1);
                 playerTwo = new Human(2);
             }
+            else if ()
             else
             {
                 Console.WriteLine("Please input a valid choice, and learn to follow instructions.  You humans frustrate me.");
@@ -152,9 +153,13 @@ namespace RPSLS
             Console.WriteLine("Hit Enter... (you should know this by now).");
             Console.ReadLine();
             Console.Clear();
+            example("Frank");
 
         }
-       
+        public void example(string something = "Bob")
+        {
+
+        }
         public void CompareOutcomes()
         {
             if (playerOne.chosenAction == "Rock" && (playerTwo.chosenAction == "Paper" || playerTwo.chosenAction == "Spock"))
@@ -271,8 +276,21 @@ namespace RPSLS
 
             }
         }
+        public void ThrowHands()
+        {
+            playerOne.ChooseAction();
+            if (playerTwo.GetType() == typeof(HardMode))
+            {
+                playerTwo.ChooseAction(playerOne.chosenAction);
+            }
+            else
+            {
+                playerTwo.ChooseAction();
+            }
+        }
         public void RunGame()
         {
+           
             WelcomeMessage();
             System.Threading.Thread.Sleep(1500);
             DisplayRules();
@@ -284,28 +302,24 @@ namespace RPSLS
             {
                 if (playerOne.score < 2 && playerTwo.score < 2)
                 {
-                    playerOne.ChooseAction();
-                    playerTwo.ChooseAction();
+                    ThrowHands();
                     CompareOutcomes();
                     ShowCurrentScores();
                     ContinueGameMessage();
                 }
                 else if (playerOne.score == 2 || playerTwo.score == 2)
                 {
-                    playerOne.ChooseAction();
-                    playerTwo.ChooseAction();
+                    ThrowHands();
                     CompareOutcomes();
                     ShowCurrentScores();
                     CheckIfLessThanTwoWins();
                     
                 }
-                else
-                {
-                    
-                }
+                
             }
         
         }
+       
     }
 }
            

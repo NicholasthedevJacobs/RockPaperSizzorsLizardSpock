@@ -22,8 +22,10 @@ namespace RPSLS
             
         }
         //member methods
-        public override void ChooseAction()
+        public override void ChooseAction(string otherplayerGesture = null)
         {
+            bool isValid = false;
+            int gestureLocation = 0;
             Console.WriteLine($"Which action would you like to choose player {playerNumber}?");
             Console.WriteLine(" ");
             Console.WriteLine("Press '1' for Rock.");
@@ -32,7 +34,39 @@ namespace RPSLS
             Console.WriteLine("Press '4' for Lizard.");
             Console.WriteLine("Press '5' for Spock.");
 
-            int gestureLocation = int.Parse(Console.ReadLine()) - 1;
+            while(isValid != true)
+            {
+                string input = Console.ReadLine();
+
+                switch (input)
+                {
+                    case "1":
+                        gestureLocation = 0;
+                        isValid = true;
+                        break;
+                    case "2":
+                        gestureLocation = 1;
+                        isValid = true;
+                        break;
+                    case "3":
+                        gestureLocation = 2;
+                        isValid = true;
+                        break;
+                    case "4":
+                        gestureLocation = 3;
+                        isValid = true;
+                        break;
+                    case "5":
+                        gestureLocation = 4;
+                        isValid = true;
+                        break;
+                    default:
+                        Console.WriteLine("This is invalid");
+                        break;
+                }
+            }
+
+           
             Console.Clear();
            
             if (gestureLocation >= 0 && gestureLocation <= 4)

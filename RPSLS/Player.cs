@@ -30,7 +30,7 @@ namespace RPSLS
 
         }
         //member methods
-        public abstract void ChooseAction();
+        public abstract void ChooseAction(string otherplayerGesture = null);
 
     }
 }
