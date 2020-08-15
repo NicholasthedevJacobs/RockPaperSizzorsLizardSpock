@@ -132,7 +132,14 @@ namespace RPSLS
                 playerOne = new Human(1);
                 playerTwo = new Human(2);
             }
-            else if (gameTypeChoice == 3)//Add this logic Here
+            else if (gameTypeChoice == 3)
+            {
+                Console.WriteLine("Commencing HARD MODE vs the legendary HAL.SUPER!!!");
+                System.Threading.Thread.Sleep(2000);
+                Console.Clear();
+                playerOne = new Human(1);
+                playerTwo = new HardMode();
+            }    
             else
             {
                 Console.WriteLine("Please input a valid choice, and learn to follow instructions.  You humans frustrate me.");
