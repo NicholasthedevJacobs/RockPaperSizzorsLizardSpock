@@ -114,7 +114,8 @@ namespace RPSLS
         {  
             Console.WriteLine("Would you like to play a solo game vs. A.I., or play against a friend?");
             System.Threading.Thread.Sleep(1200);
-            Console.WriteLine("***--Choose '1' for solo game.       Choose '2' for friendly game--*** ");//Add more options here
+            Console.WriteLine("***--Choose '1' for solo game.       Choose '2' for friendly game--*** ");
+            Console.WriteLine("            !!!CHOOSE '3' FOR SUPER DELUXE HARD MODE!!!!");
             int gameTypeChoice = int.Parse(Console.ReadLine());
             Console.Clear();
             if (gameTypeChoice == 1)
@@ -160,7 +161,7 @@ namespace RPSLS
             Console.WriteLine("Hit Enter... (you should know this by now).");
             Console.ReadLine();
             Console.Clear();
-            example("Frank");
+            
 
         }
        
@@ -236,7 +237,7 @@ namespace RPSLS
             
         public void AngryContinueMessage()
         {
-            Console.WriteLine("This is taking forever.  Can someone just win already?  If I were playing, the game would be over by now.");
+            Console.WriteLine("This is taking forever.  Can someone just win already?  If Hal.Super were playing, the game would be over by now.");
             Console.WriteLine(" ");
             System.Threading.Thread.Sleep(1500);
             Console.WriteLine("Let's just move on with it.");
@@ -275,10 +276,7 @@ namespace RPSLS
             {
                 Console.WriteLine($"Game over! {playerTwo.name} wins!");
             }
-            else
-            {
 
-            }
         }
         public void ThrowHands()
         {

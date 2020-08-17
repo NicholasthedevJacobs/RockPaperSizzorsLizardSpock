@@ -17,6 +17,8 @@ namespace RPSLS
         {
             rand = new Random();
             name = "HAL";
+            //Make sure the endgame method calls Hals name in the winner dialogue.
+
             
         }
         //member methods
@@ -29,6 +31,7 @@ namespace RPSLS
             System.Threading.Thread.Sleep(1500);
             Console.WriteLine("Please hit enter for me.  I don't have buttons to push.");
             Console.ReadLine();
+            Console.Clear();
         }
         public void SayName()
         {
